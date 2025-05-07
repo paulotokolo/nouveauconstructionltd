@@ -26,6 +26,8 @@ import {
 } from "@/components/ui/sheet";
 import { useTheme } from "next-themes";
 import { ModeToggle } from "@/components/mode-toggle";
+import { animate } from "framer-motion";
+import { useCallback } from "react";
 
 interface MenuItem {
   title: string;
@@ -76,6 +78,22 @@ const Navbar1 = ({
 }: Navbar1Props) => {
   const { resolvedTheme } = useTheme();
   const logoSrc = resolvedTheme === "dark" ? "/media/logo1.png" : "/media/logo.png";
+
+  // Smooth scroll handler using framer-motion animate
+  const handleSmoothScroll = useCallback((e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>, targetId: string) => {
+    e.preventDefault();
+    const el = document.querySelector(targetId);
+    if (el) {
+      const startY = window.scrollY;
+      const endY = el.getBoundingClientRect().top + window.scrollY;
+      animate(startY, endY, {
+        duration: 0.8,
+        ease: [0.22, 1, 0.36, 1],
+        onUpdate: (v) => window.scrollTo(0, v),
+      });
+    }
+  }, []);
+
   return (
     <section className="py-4">
       <div className="container">
@@ -83,7 +101,7 @@ const Navbar1 = ({
         <nav className="hidden justify-between lg:flex">
           <div className="flex items-center gap-6 pl-6">
             {/* Logo */}
-            <a href={logo.url} className="flex items-center gap-2">
+            <a href={logo.url} className="flex items-center gap-2" onClick={e => handleSmoothScroll(e, logo.url)}>
               <img src={logoSrc} className="max-h-8" alt={logo.alt} />
             </a>
             <div className="flex items-center">
@@ -93,7 +111,8 @@ const Navbar1 = ({
                     <NavigationMenuItem key={item.title}>
                       <NavigationMenuLink
                         href={item.url}
-                        className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-accent-foreground scroll-smooth"
+                        onClick={e => handleSmoothScroll(e, item.url)}
+                        className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-accent-foreground cursor-pointer"
                       >
                         {item.title}
                       </NavigationMenuLink>
@@ -118,7 +137,7 @@ const Navbar1 = ({
         <div className="block lg:hidden">
           <div className="flex items-center justify-between pl-4">
             {/* Logo */}
-            <a href={logo.url} className="flex items-center gap-2">
+            <a href={logo.url} className="flex items-center gap-2" onClick={e => handleSmoothScroll(e, logo.url)}>
               <img src={logoSrc} className="max-h-8" alt={logo.alt} />
             </a>
             <Sheet>
@@ -130,7 +149,7 @@ const Navbar1 = ({
               <SheetContent className="overflow-y-auto">
                 <SheetHeader>
                   <SheetTitle>
-                    <a href={logo.url} className="flex items-center gap-2">
+                    <a href={logo.url} className="flex items-center gap-2" onClick={e => handleSmoothScroll(e, logo.url)}>
                       <img src={logoSrc} className="max-h-8" alt={logo.alt} />
                     </a>
                   </SheetTitle>
@@ -142,9 +161,14 @@ const Navbar1 = ({
                     className="flex w-full flex-col gap-4"
                   >
                     {menu.map((item) => (
-                      <a key={item.title} href={item.url} className="text-md font-semibold scroll-smooth">
+                      <button
+                        key={item.title}
+                        onClick={e => handleSmoothScroll(e, item.url)}
+                        className="text-md font-semibold text-left cursor-pointer bg-transparent border-0 p-0 m-0 scroll-smooth"
+                        style={{ outline: "none" }}
+                      >
                         {item.title}
-                      </a>
+                      </button>
                     ))}
                   </Accordion>
 
