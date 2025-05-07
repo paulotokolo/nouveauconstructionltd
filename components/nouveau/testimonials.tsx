@@ -149,12 +149,12 @@ export default function TestimonialSlider() {
           {visibleTestimonials().map((testimonial, idx) => (
             <div
               key={testimonial.id}
-              className={`bg-white rounded-xl shadow-lg p-6 max-w-md flex-1 backdrop-blur-sm transition-all duration-500 
+              className={`bg-white rounded-xl shadow-lg p-6 w-full max-w-md flex-1 backdrop-blur-sm transition-all duration-500 
                 ${idx === 0 ? 'translate-x-4 opacity-90 scale-95 blur-sm' : 
                   idx === 1 ? 'z-10 scale-100' : 
                   'translate-x-4 opacity-90 scale-95 blur-sm'}`}
             >
-              <div className="flex items-center mb-4">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center mb-4 gap-4">
                 <div className="flex-shrink-0">
                   <img 
                     className="h-12 w-12 rounded-full" 
@@ -162,15 +162,15 @@ export default function TestimonialSlider() {
                     alt={`${testimonial.name}'s avatar`}
                   />
                 </div>
-                <div className="ml-4">
-                  <h3 className="text-lg font-medium text-slate-900">{testimonial.name}</h3>
-                  <p className="text-sm text-slate-500">{testimonial.role}</p>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg font-medium text-slate-900 truncate">{testimonial.name}</h3>
+                  <p className="text-sm text-slate-500 truncate">{testimonial.role}</p>
                 </div>
-                <div className="ml-auto flex">
+                <div className="flex-shrink-0 flex">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <svg 
                       key={i}
-                      className="w-5 h-5 text-yellow-400"
+                      className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >

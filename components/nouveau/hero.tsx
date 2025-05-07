@@ -14,7 +14,7 @@ export default function HeroSectionSimpleCentred() {
               className="inline-flex items-center gap-x-2 rounded-full border p-1 ps-3 text-sm transition"
               href="#"
             >
-              PRO release - Join to waitlist
+              Latest Project release - Join to waitlist
               <span className="bg-muted-foreground/15 inline-flex items-center justify-center gap-x-2 rounded-full px-2.5 py-1.5 text-sm font-semibold">
                 <svg
                   className="h-4 w-4 flex-shrink-0"
