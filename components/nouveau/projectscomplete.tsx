@@ -48,7 +48,7 @@ const projects = [
     description:
       "Vibrant downtown revitalization project combining retail, dining, residential units, and community gathering spaces.",
     image:
-      "https://images.unsplash.com/photo-1594540637741-5e53c8916ea4?q=80&w=2032&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1464983953574-0892a716854b?q=80&w=2032&auto=format&fit=crop",
     tags: ["Mixed-Use", "Retail", "Apartments", "Urban Planning"],
   },
   {

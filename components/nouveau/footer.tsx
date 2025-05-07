@@ -75,7 +75,7 @@ interface MenuItem {
         ],
       },
     ],
-    copyright = "© 2024 Shadcnblocks.com. All rights reserved.",
+    copyright,
     bottomLinks = [
       { text: "Terms and Conditions", url: "#" },
       { text: "Privacy Policy", url: "#" },
@@ -83,13 +83,16 @@ interface MenuItem {
   }: FooterProps) => {
     const { resolvedTheme } = useTheme();
     const logoSrc = resolvedTheme === "dark" ? "/media/logo1.png" : "/media/logo.png";
+    const year = new Date().getFullYear();
+    const domain = typeof window !== 'undefined' ? window.location.hostname : 'nouveauconstruction.com';
+    const copyrightText = `© ${year} ${domain}. All rights reserved.`;
     return (
       <section className="py-32">
         <div className="container">
           <footer>
             <div className="grid grid-cols-2 gap-8 lg:grid-cols-6">
               <div className="col-span-2 mb-8 lg:mb-0">
-                <div className="flex items-center gap-2 lg:justify-start">
+                <div className="flex items-center gap-2 lg:justify-start pl-6 w-full h-14">
                   <a href={logo.url}>
                     <img
                       src={logoSrc}
@@ -100,7 +103,9 @@ interface MenuItem {
                   </a>
                   <div className="ml-2"><ModeToggle /></div>
                 </div>
-                <p className="mt-4 font-bold">{tagline}</p>
+                <div className="pl-6 mt-2">
+                  <span className="text-base font-bold whitespace-nowrap">{tagline}</span>
+                </div>
               </div>
               {menuItems.map((section, sectionIdx) => (
                 <div key={sectionIdx}>
@@ -119,7 +124,7 @@ interface MenuItem {
               ))}
             </div>
             <div className="mt-24 flex flex-col justify-between gap-4 border-t pt-8 text-sm font-medium text-muted-foreground md:flex-row md:items-center">
-              <p>{copyright}</p>
+              <p className="pl-6">{copyright || copyrightText}</p>
               <ul className="flex gap-4">
                 {bottomLinks.map((link, linkIdx) => (
                   <li key={linkIdx} className="underline hover:text-primary">

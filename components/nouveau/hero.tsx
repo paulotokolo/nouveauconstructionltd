@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 export default function HeroSectionSimpleCentred() {
   return (
@@ -33,10 +34,21 @@ export default function HeroSectionSimpleCentred() {
             </a>
           </div>
           {/* End Announcement Banner */}
+          {/* House Image */}
+          <div className="flex justify-center mt-8">
+            <Image
+              src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop"
+              alt="Modern luxury house"
+              width={800}
+              height={400}
+              className="rounded-xl shadow-lg object-cover w-full max-w-3xl h-64 md:h-80 lg:h-96"
+              priority
+            />
+          </div>
           {/* Title */}
           <div className="mx-auto mt-5 max-w-2xl text-center">
             <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-            Explore homes that fit your dreams
+              Explore homes that fit your dreams
             </h1>
           </div>
           {/* End Title */}
