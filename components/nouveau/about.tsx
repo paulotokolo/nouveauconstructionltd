@@ -47,7 +47,7 @@ const companyValues: CompanyValue[] = [
     id: "quality-construction",
     name: "Quality Construction",
     description:
-      "At NouveauConstruction Ltd, we build homes that stand the test of time. Our meticulous attention to detail and use of premium materials ensure that every property we develop exceeds industry standards and client expectations.",
+      "At Nouveau Construction Ltd, we build homes that stand the test of time. Our meticulous attention to detail and use of premium materials ensure that every property we develop exceeds industry standards and client expectations.",
     icon: Building,
     color: "text-amber-500",
     principles: [
@@ -58,7 +58,7 @@ const companyValues: CompanyValue[] = [
     ],
     testimonial: {
       quote:
-        "The quality of construction in our NouveauConstruction home is remarkable. Two years after moving in, we're still discovering thoughtful details and appreciating how solidly everything was built. This isn't just a house—it's a legacy we can pass down.",
+        "The quality of construction in our Nouveau Construction home is remarkable. Two years after moving in, we're still discovering thoughtful details and appreciating how solidly everything was built. This isn't just a house—it's a legacy we can pass down.",
       author: "Marcus & Claire Donovan",
       role: "Homeowners in Riverside Heights",
       image:
@@ -82,7 +82,7 @@ const companyValues: CompanyValue[] = [
     ],
     testimonial: {
       quote:
-        "Throughout our property investment journey, NouveauConstruction was refreshingly straightforward. When unexpected issues arose during construction, they informed us immediately and presented solutions rather than excuses. Their commitment to integrity transformed what could have been a stressful process into a rewarding partnership.",
+        "Throughout our property investment journey, Nouveau Construction was refreshingly straightforward. When unexpected issues arose during construction, they informed us immediately and presented solutions rather than excuses. Their commitment to integrity transformed what could have been a stressful process into a rewarding partnership.",
       author: "Sophia Watkins",
       role: "Commercial Property Investor",
       image:
@@ -106,7 +106,7 @@ const companyValues: CompanyValue[] = [
     ],
     testimonial: {
       quote:
-        "What impressed me most about NouveauConstruction was their forward-thinking design approach. They incorporated smart home technology seamlessly into a classically inspired exterior. Three years later, the design still feels fresh and perfectly suited to our lifestyle, while our neighbors' newer homes already seem dated.",
+        "What impressed me most about Nouveau Construction was their forward-thinking design approach. They incorporated smart home technology seamlessly into a classically inspired exterior. Three years later, the design still feels fresh and perfectly suited to our lifestyle, while our neighbors' newer homes already seem dated.",
       author: "Daniel Kwon",
       role: "Homeowner in Maple Ridge Estates",
       image:
@@ -119,7 +119,7 @@ const companyValues: CompanyValue[] = [
     id: "client-experience",
     name: "Client Experience",
     description:
-      "We transform the complex process of real estate development, buying, and selling into a clear, stress-free journey. Every client interaction is an opportunity to exceed expectations and create advocates for NouveauConstruction Ltd.",
+      "We transform the complex process of real estate development, buying, and selling into a clear, stress-free journey. Every client interaction is an opportunity to exceed expectations and create advocates for Nouveau Construction Ltd.",
     icon: HandshakeIcon,
     color: "text-red-500",
     principles: [
@@ -130,7 +130,7 @@ const companyValues: CompanyValue[] = [
     ],
     testimonial: {
       quote:
-        "As first-time homebuyers, we were intimidated by the process, but NouveauConstruction guided us through every step. Their team was remarkably responsive—our questions were answered within hours, even on weekends. They treated our modest starter home purchase with the same care as their luxury listings.",
+        "As first-time homebuyers, we were intimidated by the process, but Nouveau Construction guided us through every step. Their team was remarkably responsive—our questions were answered within hours, even on weekends. They treated our modest starter home purchase with the same care as their luxury listings.",
       author: "Leslie and Jordan Taylor",
       role: "First-Time Homebuyers",
       image:
@@ -154,7 +154,7 @@ const companyValues: CompanyValue[] = [
     ],
     testimonial: {
       quote:
-        "NouveauConstruction's market knowledge proved invaluable for our investment portfolio. Their team predicted the emerging demand in the northwest corridor six months before it became widely recognized. Their guidance helped us secure properties before prices escalated, resulting in substantial appreciation that exceeded market averages by 22%.",
+        "Nouveau Construction's market knowledge proved invaluable for our investment portfolio. Their team predicted the emerging demand in the northwest corridor six months before it became widely recognized. Their guidance helped us secure properties before prices escalated, resulting in substantial appreciation that exceeded market averages by 22%.",
       author: "Victor Mendes",
       role: "Real Estate Investment Trust Manager",
       image:
@@ -167,7 +167,7 @@ const companyValues: CompanyValue[] = [
     id: "community-impact",
     name: "Community Impact",
     description:
-      "We believe real estate development should enhance communities, not just occupy space within them. Every NouveauConstruction project aims to create lasting positive impact through environmental sustainability, thoughtful integration, and support for local initiatives.",
+      "We believe real estate development should enhance communities, not just occupy space within them. Every Nouveau Construction project aims to create lasting positive impact through environmental sustainability, thoughtful integration, and support for local initiatives.",
     icon: Globe,
     color: "text-green-500",
     principles: [
@@ -178,7 +178,7 @@ const companyValues: CompanyValue[] = [
     ],
     testimonial: {
       quote:
-        "What sets NouveauConstruction apart is their genuine commitment to community well-being. When developing our neighborhood, they preserved the historic oak grove that gives our area its character, despite the additional cost. They've remained involved years later, sponsoring our annual festival and helping establish our community garden.",
+        "What sets Nouveau Construction apart is their genuine commitment to community well-being. When developing our neighborhood, they preserved the historic oak grove that gives our area its character, despite the additional cost. They've remained involved years later, sponsoring our annual festival and helping establish our community garden.",
       author: "Eliana Washington",
       role: "Community Association President",
       image:
@@ -201,13 +201,13 @@ export default function AboutSectionCompanyValues() {
       <div className="container mx-auto px-4 md:px-6 2xl:max-w-[1400px]">
         <div className="mx-auto mb-16 max-w-3xl space-y-4 text-center">
           <div className="bg-primary/10 text-primary inline-block rounded-lg px-3 py-1 text-sm">
-            The NouveauConstruction Difference
+            The Nouveau Construction Difference
           </div>
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
             Building More Than Properties—We Build Trust
           </h2>
           <p className="text-muted-foreground">
-            At NouveauConstruction Ltd, our values guide every decision—from the materials we select to the communities we help create. Discover the principles that have made us a leader in real estate development, investment, and sales.
+            At Nouveau Construction Ltd, our values guide every decision—from the materials we select to the communities we help create. Discover the principles that have made us a leader in real estate development, investment, and sales.
           </p>
         </div>
 
@@ -355,7 +355,7 @@ export default function AboutSectionCompanyValues() {
         {/* Call-to-action */}
         <div className="mt-16 text-center">
           <p className="text-muted-foreground mx-auto mb-6 max-w-2xl">
-            Experience the NouveauConstruction difference for yourself. Whether you're looking to buy, sell, or invest in exceptional real estate, our team is ready to exceed your expectations.
+            Experience the Nouveau Construction difference for yourself. Whether you're looking to buy, sell, or invest in exceptional real estate, our team is ready to exceed your expectations.
           </p>
           <Button asChild size="lg">
             <Link href="/contact">Schedule a Consultation</Link>

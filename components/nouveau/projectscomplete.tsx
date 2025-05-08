@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
-// Real estate project data for NouveauConstruction Ltd
+// Real estate project data for Nouveau Construction Ltd
 const projects = [
   {
     id: 1,
@@ -84,7 +84,7 @@ export default function PortfolioProjectStandardGrid() {
           </h2>
           <p className="text-muted-foreground mx-auto mt-4 max-w-2xl">
             Explore our portfolio of distinguished real estate projects that showcase 
-            NouveauConstruction Ltd's commitment to quality, innovation, and community-focused development.
+            Nouveau Construction Ltd's commitment to quality, innovation, and community-focused development.
           </p>
         </div>
 

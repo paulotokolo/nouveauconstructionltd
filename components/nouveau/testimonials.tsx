@@ -11,7 +11,7 @@ const testimonials = [
     avatar: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=48&h=48&fit=crop&crop=faces",
     rating: 5,
     content:
-      "Working with NouveauConstruction Ltd was a seamless experience. Their attention to architectural detail truly brought our vision to life.",
+      "Working with Nouveau Construction Ltd was a seamless experience. Their attention to architectural detail truly brought our vision to life.",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const testimonials = [
     avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=48&h=48&fit=crop&crop=faces",
     rating: 5,
     content:
-      "Professional, transparent, and efficient. NouveauConstruction handled everything from permits to final walkthroughs with ease.",
+      "Professional, transparent, and efficient. Nouveau Construction handled everything from permits to final walkthroughs with ease.",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const testimonials = [
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=48&h=48&fit=crop&crop=faces",
     rating: 5,
     content:
-      "I found my dream home thanks to NouveauConstruction. The craftsmanship and finishes were way above standard.",
+      "I found my dream home thanks to Nouveau Construction. The craftsmanship and finishes were way above standard.",
   },
   {
     id: 4,
@@ -47,7 +47,7 @@ const testimonials = [
     avatar: "https://images.unsplash.com/photo-1569913486515-b74bf7751574?w=48&h=48&fit=crop&crop=faces",
     rating: 5,
     content:
-      "Leasing through NouveauConstruction was smooth and professional. The space was move-in ready and exceeded expectations.",
+      "Leasing through Nouveau Construction was smooth and professional. The space was move-in ready and exceeded expectations.",
   },
 ];
 

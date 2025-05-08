@@ -45,16 +45,6 @@ interface Navbar1Props {
     title: string;
   };
   menu?: MenuItem[];
-  auth?: {
-    login: {
-      title: string;
-      url: string;
-    };
-    signup: {
-      title: string;
-      url: string;
-    };
-  };
 }
 
 const Navbar1 = ({
@@ -71,10 +61,6 @@ const Navbar1 = ({
     { title: "Testimonials", url: "#testimonials" },
     { title: "Contact", url: "#contact" },
   ],
-  auth = {
-    login: { title: "Login", url: "#" },
-    signup: { title: "Sign up", url: "#" },
-  },
 }: Navbar1Props) => {
   const { resolvedTheme } = useTheme();
   const logoSrc = resolvedTheme === "dark" ? "/media/logo1.png" : "/media/logo.png";
@@ -122,14 +108,8 @@ const Navbar1 = ({
               </NavigationMenu>
             </div>
           </div>
-          <div className="flex gap-2 items-center">
+          <div className="flex items-center">
             <ModeToggle />
-            <Button asChild variant="outline" size="sm">
-              <a href={auth.login.url}>{auth.login.title}</a>
-            </Button>
-            <Button asChild size="sm">
-              <a href={auth.signup.url}>{auth.signup.title}</a>
-            </Button>
           </div>
         </nav>
 
@@ -172,16 +152,8 @@ const Navbar1 = ({
                     ))}
                   </Accordion>
 
-                  <div className="flex flex-col gap-3">
-                    <Button asChild variant="outline">
-                      <a href={auth.login.url}>{auth.login.title}</a>
-                    </Button>
-                    <Button asChild>
-                      <a href={auth.signup.url}>{auth.signup.title}</a>
-                    </Button>
-                    <div className="pt-2 flex justify-center">
-                      <ModeToggle />
-                    </div>
+                  <div className="flex justify-center pt-2">
+                    <ModeToggle />
                   </div>
                 </div>
               </SheetContent>

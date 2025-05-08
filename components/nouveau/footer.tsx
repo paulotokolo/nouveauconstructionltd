@@ -84,7 +84,7 @@ const Footer = ({
   const { resolvedTheme } = useTheme();
   const logoSrc = resolvedTheme === "dark" ? "/media/logo1.png" : "/media/logo.png";
   const year = new Date().getFullYear();
-  const domain = typeof window !== 'undefined' ? window.location.hostname : 'nouveauconstruction.com';
+  const domain = typeof window !== 'undefined' ? window.location.hostname : '/';
   const copyrightText = `© ${year} ${domain}. All rights reserved.`;
   
   return (
