@@ -27,7 +27,7 @@ export default function Home() {
       <div id="projects" data-aos="fade-up" className="transition-all duration-700 ease-in-out">
         <PortfolioProjectStandardGrid />
       </div>
-      <div id="testimonials" data-aos="fade-left" className="transition-all duration-700 ease-in-out">
+      <div id="testimonials" className="transition-all duration-700 ease-in-out">
         <TestimonialSlider />
       </div>
       <div id="contact" data-aos="zoom-in" className="transition-all duration-700 ease-in-out">
