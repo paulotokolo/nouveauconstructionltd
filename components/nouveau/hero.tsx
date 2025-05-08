@@ -8,12 +8,12 @@ export default function HeroSection() {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
-    <div className="relative overflow-hidden bg-white dark:bg-gray-950">
+    <div className="relative overflow-x-hidden overflow-y-visible bg-white dark:bg-gray-950">
       {/* Grid pattern overlay */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
-      
-      <div className="container mx-auto px-4 py-16 md:px-6 lg:py-24 2xl:max-w-[1400px]">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
+      <div className="absolute inset-0 bg-grid-pattern opacity-20 z-0"></div>
+
+      <div className="relative container mx-auto px-4 py-16 md:px-6 lg:py-24 2xl:max-w-[1400px] z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left Content */}
           <div>
             {/* Announcement Banner */}
@@ -23,20 +23,20 @@ export default function HeroSection() {
                 <ChevronRight className="h-4 w-4" />
               </Badge>
             </div>
-            
+
             {/* Main Heading */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 break-words">
               Build better<br />
               lifestyles with<br />
               modern properties
             </h1>
-            
+
             <p className="text-xl text-muted-foreground mb-8 max-w-xl">
               A professionally curated collection of luxury properties for 
               creating beautiful, responsive living spaces that match 
               your aspirations.
             </p>
-            
+
             {/* Feature List */}
             <ul className="space-y-3 mb-8">
               <li className="flex items-center">
@@ -58,18 +58,18 @@ export default function HeroSection() {
                 <span>Built with sustainability and full accessibility</span>
               </li>
             </ul>
-            
+
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 mb-8">
-              <Button size="lg">
+              <Button size="lg" className="cursor-pointer">
                 Get Started
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button size="lg" variant="outline">
+              <Button size="lg" variant="outline" className="cursor-pointer">
                 View Projects
               </Button>
             </div>
-            
+
             {/* Property Types */}
             <div className="flex items-center flex-wrap gap-x-4 text-sm text-muted-foreground">
               <span>Trusted by developers at</span>
@@ -80,10 +80,10 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
-          
+
           {/* Right Image */}
-          <div className="relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-lg aspect-square rounded-lg overflow-hidden shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)]">
+          <div className="relative flex justify-center lg:justify-end mt-8 lg:mt-0">
+            <div className="relative w-full aspect-square rounded-lg overflow-hidden shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)]">
               {/* Main image */}
               <div className="absolute inset-0">
                 <Image
@@ -95,14 +95,14 @@ export default function HeroSection() {
                   onLoadingComplete={() => setImageLoaded(true)}
                 />
               </div>
-              
+
               {/* Image overlay with subtle shadow */}
               <div className="absolute inset-0 shadow-inner"></div>
             </div>
           </div>
         </div>
       </div>
-      
+
       {/* Add grid pattern style */}
       <style jsx global>{`
         .bg-grid-pattern {
