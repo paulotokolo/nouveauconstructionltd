@@ -1,102 +1,115 @@
+import { useState } from 'react';
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 
-export default function HeroSectionSimpleCentred() {
+export default function HeroSection() {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
-    <>
-      {/* Hero */}
-      <div>
-        <div className="container mx-auto px-4 py-24 md:px-6 lg:py-32 2xl:max-w-[1400px]">
-          {/* Announcement Banner */}
-          <div className="flex justify-center">
-            <a
-              className="inline-flex items-center gap-x-2 rounded-full border p-1 ps-3 text-sm transition"
-              href="#"
-            >
-              Latest Project release - Join to waitlist
-              <span className="bg-muted-foreground/15 inline-flex items-center justify-center gap-x-2 rounded-full px-2.5 py-1.5 text-sm font-semibold">
-                <svg
-                  className="h-4 w-4 flex-shrink-0"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={24}
-                  height={24}
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="m9 18 6-6-6-6" />
-                </svg>
-              </span>
-            </a>
-          </div>
-          {/* End Announcement Banner */}
-          {/* House Image */}
-          <div className="flex justify-center mt-8">
-            <Image
-              src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop"
-              alt="Modern luxury house"
-              width={800}
-              height={400}
-              className="rounded-xl shadow-lg object-cover w-full max-w-3xl h-64 md:h-80 lg:h-96"
-              priority
-            />
-          </div>
-          {/* Title */}
-          <div className="mx-auto mt-5 max-w-2xl text-center">
-            <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-              Explore homes that fit your dreams
+    <div className="relative overflow-hidden bg-white dark:bg-gray-950">
+      {/* Grid pattern overlay */}
+      <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
+      
+      <div className="container mx-auto px-4 py-16 md:px-6 lg:py-24 2xl:max-w-[1400px]">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
+          {/* Left Content */}
+          <div>
+            {/* Announcement Banner */}
+            <div className="mb-8">
+              <Badge variant="outline" className="rounded-full px-4 py-1">
+                <span className="mr-2">Just released: Enhanced customization and new properties</span>
+                <ChevronRight className="h-4 w-4" />
+              </Badge>
+            </div>
+            
+            {/* Main Heading */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6">
+              Build better<br />
+              lifestyles with<br />
+              modern properties
             </h1>
-          </div>
-          {/* End Title */}
-          <div className="mx-auto mt-5 max-w-3xl text-center">
-            <p className="text-muted-foreground text-xl">
-            Discover Your Dream
-            Luxury House
+            
+            <p className="text-xl text-muted-foreground mb-8 max-w-xl">
+              A professionally curated collection of luxury properties for 
+              creating beautiful, responsive living spaces that match 
+              your aspirations.
             </p>
+            
+            {/* Feature List */}
+            <ul className="space-y-3 mb-8">
+              <li className="flex items-center">
+                <svg className="h-5 w-5 mr-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span>Customizable properties for any lifestyle</span>
+              </li>
+              <li className="flex items-center">
+                <svg className="h-5 w-5 mr-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span>Smart home support out of the box</span>
+              </li>
+              <li className="flex items-center">
+                <svg className="h-5 w-5 mr-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span>Built with sustainability and full accessibility</span>
+              </li>
+            </ul>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap gap-4 mb-8">
+              <Button size="lg">
+                Get Started
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
+              <Button size="lg" variant="outline">
+                View Projects
+              </Button>
+            </div>
+            
+            {/* Property Types */}
+            <div className="flex items-center flex-wrap gap-x-4 text-sm text-muted-foreground">
+              <span>Trusted by developers at</span>
+              <div className="flex space-x-4">
+                <span className="font-semibold">Premium Properties</span>
+                <span className="font-semibold">Luxury Estates</span>
+                <span className="font-semibold">Modern Living</span>
+              </div>
+            </div>
           </div>
-          {/* Buttons */}
-          <div className="mt-8 flex justify-center gap-3">
-            <Button className="cursor-pointer" size={"lg"}>Projects</Button>
-            <Button className="cursor-pointer" size={"lg"} variant={"outline"}>
-              Contact Us
-            </Button>
-          </div>
-          {/* End Buttons */}
-          <div className="mt-5 flex items-center justify-center gap-x-1 sm:gap-x-3">
-            <span className="text-muted-foreground text-sm">
-              Property Types:
-            </span>
-            <span className="text-sm font-bold">Luxury Villas, etc</span>
-            <svg
-              className="text-muted-foreground h-5 w-5"
-              width={16}
-              height={16}
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <path
-                d="M6 13L10 3"
-                stroke="currentColor"
-                strokeLinecap="round"
-              />
-            </svg>
-            <a
-              className="inline-flex items-center gap-x-1 text-sm font-medium decoration-2 hover:underline"
-              href="#"
-            >
-              View All Properties
-              <ChevronRight className="h-4 w-4 flex-shrink-0" />
-            </a>
+          
+          {/* Right Image */}
+          <div className="relative flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-lg aspect-square rounded-lg overflow-hidden shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)]">
+              {/* Main image */}
+              <div className="absolute inset-0">
+                <Image
+                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1024"
+                  alt="Luxury real estate"
+                  fill
+                  className="object-cover"
+                  priority
+                  onLoadingComplete={() => setImageLoaded(true)}
+                />
+              </div>
+              
+              {/* Image overlay with subtle shadow */}
+              <div className="absolute inset-0 shadow-inner"></div>
+            </div>
           </div>
         </div>
       </div>
-      {/* End Hero */}
-    </>
+      
+      {/* Add grid pattern style */}
+      <style jsx global>{`
+        .bg-grid-pattern {
+          background-image: radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+          background-size: 20px 20px;
+        }
+      `}</style>
+    </div>
   );
 }
