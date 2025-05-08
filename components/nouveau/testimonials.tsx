@@ -8,7 +8,7 @@ const testimonials = [
     id: 1,
     name: "Sophia Turner",
     role: "Architect",
-    avatar: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=48&h=48&fit=crop&crop=faces",
+    avatar: "https://images.unsplash.com/photo-1507152832244-10d45c7eda57?w=48&h=48&fit=crop&crop=faces",
     rating: 5,
     content:
       "Working with Nouveau Construction Ltd was a seamless experience. Their attention to architectural detail truly brought our vision to life.",
@@ -17,25 +17,25 @@ const testimonials = [
     id: 2,
     name: "James Wilson",
     role: "Real Estate Investor",
-    avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=48&h=48&fit=crop&crop=faces",
+    avatar: "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?w=48&h=48&fit=crop&crop=faces",
     rating: 5,
     content:
       "Professional, transparent, and efficient. Nouveau Construction handled everything from permits to final walkthroughs with ease.",
   },
   {
     id: 3,
-    name: "Alice Johnson",
+    name: "Jamal Ola",
     role: "Homebuyer",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=48&h=48&fit=crop&crop=faces",
+    avatar: "https://images.unsplash.com/photo-1565884280295-98eb83e41c65?w=48&h=48&fit=crop&crop=faces",
     rating: 5,
     content:
       "I found my dream home thanks to Nouveau Construction. The craftsmanship and finishes were way above standard.",
   },
   {
     id: 4,
-    name: "Michael Brown",
+    name: "Chris Kurt",
     role: "Property Developer",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=48&h=48&fit=crop&crop=faces",
+    avatar: "https://images.unsplash.com/photo-1529111290557-82f6d5c6cf85?w=48&h=48&fit=crop&crop=faces",
     rating: 5,
     content:
       "They brought our multi-unit housing project in under budget and ahead of schedule. Truly impressive work ethic.",
@@ -44,7 +44,7 @@ const testimonials = [
     id: 5,
     name: "Emily Davis",
     role: "Commercial Tenant",
-    avatar: "https://images.unsplash.com/photo-1569913486515-b74bf7751574?w=48&h=48&fit=crop&crop=faces",
+    avatar: "https://images.unsplash.com/photo-1611432579402-7037e3e2c1e4?w=48&h=48&fit=crop&crop=faces",
     rating: 5,
     content:
       "Leasing through Nouveau Construction was smooth and professional. The space was move-in ready and exceeded expectations.",

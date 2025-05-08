@@ -62,7 +62,7 @@ const companyValues: CompanyValue[] = [
       author: "Marcus & Claire Donovan",
       role: "Homeowners in Riverside Heights",
       image:
-        "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400",
+        "https://images.unsplash.com/photo-1495603889488-42d1d66e5523?q=80&w=400",
     },
     image:
       "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800",
@@ -86,7 +86,7 @@ const companyValues: CompanyValue[] = [
       author: "Sophia Watkins",
       role: "Commercial Property Investor",
       image:
-        "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=400",
+        "https://images.unsplash.com/photo-1589156280159-27698a70f29e?q=80&w=400",
     },
     image:
       "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=800",
@@ -110,7 +110,7 @@ const companyValues: CompanyValue[] = [
       author: "Daniel Kwon",
       role: "Homeowner in Maple Ridge Estates",
       image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400",
+        "https://images.unsplash.com/photo-1614890085618-0e1054da74f8?q=80&w=400",
     },
     image:
       "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=800",
@@ -134,7 +134,7 @@ const companyValues: CompanyValue[] = [
       author: "Leslie and Jordan Taylor",
       role: "First-Time Homebuyers",
       image:
-        "https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=400",
+        "https://images.unsplash.com/photo-1614890107637-fe96d74acf4b?q=80&w=400",
     },
     image:
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800",
@@ -158,7 +158,7 @@ const companyValues: CompanyValue[] = [
       author: "Victor Mendes",
       role: "Real Estate Investment Trust Manager",
       image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400",
+        "https://images.unsplash.com/photo-1628149321186-7d4c5b1170f9?q=80&w=400",
     },
     image:
       "https://images.unsplash.com/photo-1626178793926-22b28830aa30?q=80&w=800",
@@ -182,7 +182,7 @@ const companyValues: CompanyValue[] = [
       author: "Eliana Washington",
       role: "Community Association President",
       image:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400",
+        "https://images.unsplash.com/photo-1473492201326-7c01dd2e596b?q=80&w=400",
     },
     image:
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800",
