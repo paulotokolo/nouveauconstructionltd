@@ -1,115 +1,162 @@
-import { useState } from 'react';
+"use client"; // Add this if not already present at the top of HeroSection.tsx
+
+import { useState, useCallback } from "react"; // Import useCallback
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
+import { animate } from "framer-motion"; // Import animate from framer-motion
 
 export default function HeroSection() {
-  const [imageLoaded, setImageLoaded] = useState(false);
+  // Smooth scroll handler copied and adapted from Navbar1
+  const handleSmoothScroll = useCallback(
+    (
+      e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>,
+      targetId: string
+    ) => {
+      e.preventDefault();
+      const el = document.querySelector(targetId);
+      if (el) {
+        const startY = window.scrollY;
+        // Get the top position of the element relative to the viewport
+        const elementTop = el.getBoundingClientRect().top;
+        // Calculate the absolute top position of the element on the page
+        const endY = elementTop + window.scrollY;
+
+        animate(startY, endY, {
+          duration: 0.8,
+          ease: [0.22, 1, 0.36, 1], // Cubic bezier easing for smooth effect
+          onUpdate: (v) => window.scrollTo(0, v),
+        });
+      } else {
+        console.warn(`Element with ID "${targetId}" not found.`);
+      }
+    },
+    []
+  );
 
   return (
-    <div className="relative overflow-x-hidden overflow-y-visible bg-white dark:bg-gray-950">
-      {/* Grid pattern overlay */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-20 z-0"></div>
+    <div className="overflow-hidden bg-white dark:bg-gray-950">
+      <div className="flex flex-col sm:grid sm:grid-cols-2">
+        {/* Image Block */}
+        <div className="h-56 sm:h-full sm:order-last">
+          <Image
+            src="https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?auto=format&fit=crop&q=80&w=1024"
+            alt="Quality construction project"
+            className="h-full w-full object-cover"
+            width={1024}
+            height={768}
+            priority
+          />
+        </div>
 
-      <div className="relative container mx-auto px-4 py-16 md:px-6 lg:py-24 2xl:max-w-[1400px] z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          {/* Left Content */}
-          <div>
+        {/* Content Block */}
+        <div className="p-6 md:p-12 lg:px-16 lg:py-24 sm:order-first">
+          <div className="mx-auto max-w-xl">
             {/* Announcement Banner */}
-            <div className="mb-8">
-              <Badge variant="outline" className="rounded-full px-4 py-1">
-                <span className="mr-2">Just released: Enhanced customization and new properties</span>
-                <ChevronRight className="h-4 w-4" />
+            <div className="mb-6">
+              <Badge
+                variant="outline"
+                className="flex items-center gap-1 sm:gap-2 rounded-full px-3 py-1 text-xs sm:text-sm sm:px-4 whitespace-normal max-w-full break-words"
+              >
+                <span className="block">
+                  Now Offering: End-to-End Project Management & Sustainable
+                  Builds!
+                </span>
+                <ChevronRight className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
               </Badge>
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 break-words">
-              Build better<br />
-              lifestyles with<br />
-              modern properties
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-4 sm:mb-6 break-words">
+              Building Your Vision,
+              <br />
+              Crafting Your Future,
+              <br />
+              Solid Foundations.
             </h1>
 
-            <p className="text-xl text-muted-foreground mb-8 max-w-xl">
-              A professionally curated collection of luxury properties for 
-              creating beautiful, responsive living spaces that match 
-              your aspirations.
+            <p className="text-lg sm:text-xl text-muted-foreground mb-6 sm:mb-8">
+              We're passionate about bringing your construction projects to
+              life. From initial design to the final touches, we deliver
+              quality craftsmanship and lasting structures that meet your
+              unique needs and aspirations.
             </p>
 
             {/* Feature List */}
-            <ul className="space-y-3 mb-8">
+            <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
               <li className="flex items-center">
-                <svg className="h-5 w-5 mr-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                <svg
+                  className="h-4 w-4 sm:h-5 sm:w-5 mr-2 sm:mr-3 text-primary"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
                 </svg>
-                <span>Customizable properties for any lifestyle</span>
+                <span>Tailored construction solutions for every dream</span>
               </li>
               <li className="flex items-center">
-                <svg className="h-5 w-5 mr-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                <svg
+                  className="h-4 w-4 sm:h-5 sm:w-5 mr-2 sm:mr-3 text-primary"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
                 </svg>
-                <span>Smart home support out of the box</span>
+                <span>Transparent processes and clear communication</span>
               </li>
               <li className="flex items-center">
-                <svg className="h-5 w-5 mr-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                <svg
+                  className="h-4 w-4 sm:h-5 sm:w-5 mr-2 sm:mr-3 text-primary"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
                 </svg>
-                <span>Built with sustainability and full accessibility</span>
+                <span>
+                  Committed to sustainable and durable building practices
+                </span>
               </li>
             </ul>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4 mb-8">
-              <Button size="lg" className="cursor-pointer">
-                Get Started
+            <div className="flex flex-wrap gap-3 sm:gap-4 mb-6 sm:mb-8">
+              <Button
+                size="lg"
+                className="cursor-pointer"
+                onClick={(e) => handleSmoothScroll(e, "#contact")} // Added onClick handler
+              >
+                Start Your Project
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button size="lg" variant="outline" className="cursor-pointer">
-                View Projects
-              </Button>
             </div>
 
-            {/* Property Types */}
-            <div className="flex items-center flex-wrap gap-x-4 text-sm text-muted-foreground">
-              <span>Trusted by developers at</span>
-              <div className="flex space-x-4">
-                <span className="font-semibold">Premium Properties</span>
-                <span className="font-semibold">Luxury Estates</span>
-                <span className="font-semibold">Modern Living</span>
+            {/* Project Types / Partners */}
+            <div className="flex items-center flex-wrap gap-x-2 sm:gap-x-4 text-xs sm:text-sm text-muted-foreground">
+              <span>Our Expertise:</span>
+              <div className="flex space-x-2 sm:space-x-4">
+                <span className="font-semibold">Residential Builds</span>
+                <span className="font-semibold">Commercial Projects</span>
+                <span className="font-semibold">
+                  Renovations & Remodeling
+                </span>
               </div>
-            </div>
-          </div>
-
-          {/* Right Image */}
-          <div className="relative flex justify-center lg:justify-end mt-8 lg:mt-0">
-            <div className="relative w-full aspect-square rounded-lg overflow-hidden shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)]">
-              {/* Main image */}
-              <div className="absolute inset-0">
-                <Image
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1024"
-                  alt="Luxury real estate"
-                  fill
-                  className="object-cover"
-                  priority
-                  onLoadingComplete={() => setImageLoaded(true)}
-                />
-              </div>
-
-              {/* Image overlay with subtle shadow */}
-              <div className="absolute inset-0 shadow-inner"></div>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Add grid pattern style */}
-      <style jsx global>{`
-        .bg-grid-pattern {
-          background-image: radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px);
-          background-size: 20px 20px;
-        }
-      `}</style>
     </div>
   );
 }

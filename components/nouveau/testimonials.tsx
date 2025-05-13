@@ -6,51 +6,68 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const testimonials = [
   {
     id: 1,
-    name: "Sophia Turner",
-    role: "Architect",
-    avatar: "https://images.unsplash.com/photo-1507152832244-10d45c7eda57?w=48&h=48&fit=crop&crop=faces",
+    name: "Sarah Chen",
+    role: "Lead Architect, Innovate Designs",
+    avatar: "https://images.unsplash.com/photo-1507152832244-10d45c7eda57?w=48&h=48&fit=crop&crop=faces", // Keep or change avatar
     rating: 5,
     content:
-      "Working with Nouveau Construction Ltd was a seamless experience. Their attention to architectural detail truly brought our vision to life.",
+      "It's one thing to design a complex structure, but seeing Nouveau Construction bring those blueprints to life with such precision was incredible. They really understood the nuances of our architectural vision and collaborated every step of the way. A dream team for any architect!",
   },
   {
     id: 2,
-    name: "James Wilson",
-    role: "Real Estate Investor",
-    avatar: "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?w=48&h=48&fit=crop&crop=faces",
+    name: "Michael B. Jordan", // Example name, changed from James Wilson
+    role: "Project Owner, Summit Properties",
+    avatar: "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?w=48&h=48&fit=crop&crop=faces", // Keep or change avatar
     rating: 5,
     content:
-      "Professional, transparent, and efficient. Nouveau Construction handled everything from permits to final walkthroughs with ease.",
+      "As a project owner, juggling a new build can be stressful, but Nouveau Construction made it surprisingly straightforward. They handled all the complexities, from groundbreaking to the final finishes, keeping me informed and confident throughout. Their project management is top-notch.",
   },
   {
     id: 3,
-    name: "Jamal Ola",
-    role: "Homebuyer",
-    avatar: "https://images.unsplash.com/photo-1565884280295-98eb83e41c65?w=48&h=48&fit=crop&crop=faces",
+    name: "The Adebayo Family", // Changed from Jamal Ola to be more personal
+    role: "Homeowners",
+    avatar: "https://images.unsplash.com/photo-1565884280295-98eb83e41c65?w=48&h=48&fit=crop&crop=faces", // Keep or change avatar
     rating: 5,
     content:
-      "I found my dream home thanks to Nouveau Construction. The craftsmanship and finishes were way above standard.",
+      "We're absolutely thrilled with our new home built by Nouveau Construction. The quality of the build, the stunning finishes, and the attention to every little detail just blew us away. It's more than a house; it's our dream realized.",
   },
   {
     id: 4,
-    name: "Chris Kurt",
+    name: "Chris Kurt", // Kept name, role is good
     role: "Property Developer",
-    avatar: "https://images.unsplash.com/photo-1529111290557-82f6d5c6cf85?w=48&h=48&fit=crop&crop=faces",
+    avatar: "https://images.unsplash.com/photo-1529111290557-82f6d5c6cf85?w=48&h=48&fit=crop&crop=faces", // Keep or change avatar
     rating: 5,
     content:
-      "They brought our multi-unit housing project in under budget and ahead of schedule. Truly impressive work ethic.",
+      "In property development, time and budget are everything. Nouveau Construction didn't just meet our targets for our latest multi-unit complex; they exceeded them. Their proactive approach and skilled team are a game-changer. Highly recommend!",
   },
   {
     id: 5,
-    name: "Emily Davis",
-    role: "Commercial Tenant",
-    avatar: "https://images.unsplash.com/photo-1611432579402-7037e3e2c1e4?w=48&h=48&fit=crop&crop=faces",
+    name: "David Lee", // Changed from Emily Davis
+    role: "Business Owner, TechSpark Solutions",
+    avatar: "https://images.unsplash.com/photo-1611432579402-7037e3e2c1e4?w=48&h=48&fit=crop&crop=faces", // Keep or change avatar
     rating: 5,
     content:
-      "Leasing through Nouveau Construction was smooth and professional. The space was move-in ready and exceeded expectations.",
+      "We needed our new commercial space built out quickly and to a very specific design for our business. Nouveau Construction was phenomenal – they understood our operational needs, managed the build efficiently, and the quality of their work means our new headquarters is not only functional but also incredibly impressive to clients.",
   },
+  {
+    id: 6, // Added a new one for variety
+    name: "Maria Gonzalez",
+    role: "Interior Designer",
+    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=48&h=48&fit=crop&crop=faces", // Example new avatar
+    rating: 5,
+    content:
+      "I've collaborated with many construction firms, but Nouveau stands out. Their team respects the design integrity while offering practical construction solutions. The communication was excellent, making the entire process smooth for both me and our mutual client. The final space was a testament to their craftsmanship."
+  },
+  {
+    id: 7, // Added another one
+    name: "Tom Richardson",
+    role: "Facilities Manager, Global Corp",
+    avatar: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=48&h=48&fit=crop&crop=faces", // Example new avatar
+    rating: 4, // Varied the rating slightly for realism
+    content:
+      "Nouveau Construction undertook a significant renovation of our office wing. They were professional, worked hard to minimize disruption to our operations, and were very responsive to our evolving needs. The project was completed to a high standard. A reliable partner for major construction works."
+  }
 ];
-
 
 export default function TestimonialSlider() {
   const [activeIndex, setActiveIndex] = useState(0);

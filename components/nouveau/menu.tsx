@@ -57,7 +57,7 @@ const Navbar1 = ({
   menu = [
     { title: "Home", url: "#hero" },
     { title: "About", url: "#about" },
-    { title: "Projects", url: "#projects" },
+    // { title: "Projects", url: "#projects" },
     { title: "Testimonials", url: "#testimonials" },
     { title: "Contact", url: "#contact" },
   ],
@@ -86,9 +86,9 @@ const Navbar1 = ({
         {/* Desktop Menu */}
         <nav className="hidden justify-between lg:flex">
           <div className="flex items-center gap-6 pl-6">
-            {/* Logo */}
+            {/* Logo - made bigger */}
             <a href={logo.url} className="flex items-center gap-2" onClick={e => handleSmoothScroll(e, logo.url)}>
-              <img src={logoSrc} className="max-h-8" alt={logo.alt} />
+              <img src={logoSrc} className="max-h-12" alt={logo.alt} />
             </a>
             <div className="flex items-center">
               <NavigationMenu>
@@ -116,9 +116,9 @@ const Navbar1 = ({
         {/* Mobile Menu */}
         <div className="block lg:hidden">
           <div className="flex items-center justify-between pl-4">
-            {/* Logo */}
+            {/* Logo - made bigger */}
             <a href={logo.url} className="flex items-center gap-2" onClick={e => handleSmoothScroll(e, logo.url)}>
-              <img src={logoSrc} className="max-h-8" alt={logo.alt} />
+              <img src={logoSrc} className="max-h-10" alt={logo.alt} />
             </a>
             <Sheet>
               <SheetTrigger asChild>
@@ -130,7 +130,8 @@ const Navbar1 = ({
                 <SheetHeader>
                   <SheetTitle>
                     <a href={logo.url} className="flex items-center gap-2" onClick={e => handleSmoothScroll(e, logo.url)}>
-                      <img src={logoSrc} className="max-h-8" alt={logo.alt} />
+                      {/* Logo in sheet header also made bigger */}
+                      <img src={logoSrc} className="max-h-10" alt={logo.alt} />
                     </a>
                   </SheetTitle>
                 </SheetHeader>

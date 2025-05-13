@@ -16,7 +16,7 @@ export default function Contact() {
           <div className="space-y-8 text-center md:text-left">
             <div className="flex flex-col items-center md:items-start gap-4">
               <Image
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=400&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?q=80&w=400&auto=format&fit=crop"
                 alt="Contact Nouveau Construction"
                 width={200}
                 height={120}

@@ -4,7 +4,6 @@ import Contact from "@/components/nouveau/contact"
 import { Footer } from "@/components/nouveau/footer"
 import HeroSectionSimpleCentred from "@/components/nouveau/hero"
 import { Navbar1 } from "@/components/nouveau/menu"
-import PortfolioProjectStandardGrid from "@/components/nouveau/projectscomplete"
 import TestimonialSlider from "@/components/nouveau/testimonials"
 import AOS from "aos"
 import "aos/dist/aos.css"
@@ -23,9 +22,6 @@ export default function Home() {
       </div>
       <div id="about" data-aos="fade-right" className="transition-all duration-700 ease-in-out">
         <AboutSectionCompanyValues />
-      </div>
-      <div id="projects" data-aos="fade-up" className="transition-all duration-700 ease-in-out">
-        <PortfolioProjectStandardGrid />
       </div>
       <div id="testimonials" className="transition-all duration-700 ease-in-out">
         <TestimonialSlider />
