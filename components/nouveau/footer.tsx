@@ -71,7 +71,7 @@ const Footer = ({
   const copyrightText = `© ${year} ${domain}. All rights reserved.`;
 
   return (
-    <section className="py-16 md:py-32">
+    <section className="py-16 md:py-32 border">
       <div className="container px-6 md:px-4 mx-auto">
         <footer>
           {/* Logo and tagline */}
