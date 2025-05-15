@@ -82,9 +82,9 @@ const Navbar1 = ({
 
   return (
     <section className="py-4">
-      <div className="container border border-green-500">
+      <div className="container">
         {/* Desktop Menu */}
-        <nav className="hidden justify-between lg:flex border border-black">
+        <nav className="hidden justify-between lg:flex">
           <div className="flex items-center gap-6 pl-6">
             {/* Logo - made bigger */}
             <a href={logo.url} className="flex items-center gap-2" onClick={e => handleSmoothScroll(e, logo.url)}>
@@ -108,8 +108,7 @@ const Navbar1 = ({
               </NavigationMenu>
             </div>
           </div>
-          {/* Theme toggle positioned on far right with small margin */}
-          <div className="flex items-center mr-0">
+          <div className="flex items-center">
             <ModeToggle />
           </div>
         </nav>

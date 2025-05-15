@@ -35,7 +35,7 @@ export default function HeroSection() {
     []
   );
 
-  return (
+  return ( 
     <div className="overflow-hidden bg-white dark:bg-gray-950">
       <div className="flex flex-col sm:grid sm:grid-cols-2">
         {/* Image Block */}
