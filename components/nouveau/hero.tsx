@@ -76,7 +76,7 @@ export default function HeroSection() {
               Solid Foundations.
             </h1>
 
-            <p className="text-lg sm:text-xl text-muted-foreground mb-6 sm:mb-8">
+            <p className="text-lg sm:text-xl text-muted-foreground dark:text-white mb-6 sm:mb-8">
               We're passionate about bringing your construction projects to
               life. From initial design to the final touches, we deliver
               quality craftsmanship and lasting structures that meet your
@@ -144,7 +144,7 @@ export default function HeroSection() {
             </div>
 
             {/* Project Types / Partners */}
-            <div className="flex items-center flex-wrap gap-x-2 sm:gap-x-4 text-xs sm:text-sm text-muted-foreground">
+            <div className="flex items-center flex-wrap gap-x-2 sm:gap-x-4 text-xs sm:text-sm text-muted-foreground dark:text-white">
               <span>Our Expertise:</span>
               <div className="flex space-x-2 sm:space-x-4">
                 <span className="font-semibold">Residential Builds</span>

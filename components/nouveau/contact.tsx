@@ -39,10 +39,10 @@ export default function Contact() {
                 className="rounded-xl shadow-md object-cover"
               />
               <h2 className="text-3xl font-bold sm:text-4xl text-foreground">Contact Us</h2>
-              <p className="text-muted-foreground text-lg max-w-md">
+              <p className=" text-lg max-w-md">
                 We'd love to talk about how we can help you. Reach out for project inquiries, partnerships, or just to say hello!
               </p>
-              <div className="flex flex-col gap-2 text-sm text-muted-foreground mt-4">
+              <div className="flex flex-col gap-2 text-sm  mt-4">
                 <span><strong>Email:</strong> contact@nouveauconstructionltd.com</span>
                 <span><strong>Phone:</strong> 09039833569</span>
                 <span><strong>Address:</strong> 1 Bouar Close, Off Bangui Street, Wuse 2, Abuja, FCT</span>
@@ -59,7 +59,7 @@ export default function Contact() {
                     <CheckCircle2 className="w-16 h-16 text-primary" />
                   </div>
                   <h3 className="text-2xl font-semibold text-card-foreground">Thank You!</h3>
-                  <p className="text-muted-foreground">Your message has been sent successfully. We'll get back to you soon.</p>
+                  <p className="">Your message has been sent successfully. We'll get back to you soon.</p>
                   <Button 
                     onClick={() => window.location.reload()} 
                     variant="outline" 
@@ -167,7 +167,7 @@ export default function Contact() {
                     </div>
 
                     <div className="mt-3 text-center">
-                      <p className="text-muted-foreground text-sm">
+                      <p className=" text-sm">
                         We'll get back to you in 1-2 business days.
                       </p>
                     </div>

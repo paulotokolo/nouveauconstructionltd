@@ -207,7 +207,7 @@ export default function AboutSectionCompanyValues() {
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
             Crafting Structures, Building Futures
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground dark:text-white">
             At Nouveau Construction Ltd, our core values are hammered into every beam and blueprint. They shape every choice, from the materials we handpick to the lasting structures we raise. See the principles that define us as leaders in quality construction.
           </p>
         </div>
@@ -272,7 +272,7 @@ export default function AboutSectionCompanyValues() {
                 <h3 className="text-2xl font-bold">{currentValue.name}</h3>
               </div>
 
-              <p className="text-muted-foreground text-lg">
+              <p className="text-muted-foreground dark:text-white text-lg">
                 {currentValue.description}
               </p>
 
@@ -306,12 +306,12 @@ export default function AboutSectionCompanyValues() {
                         <h4 className="font-semibold">
                           {currentValue.testimonial.author}
                         </h4>
-                        <p className="text-muted-foreground text-sm">
+                        <p className="text-muted-foreground dark:text-white text-sm">
                           {currentValue.testimonial.role}
                         </p>
                       </div>
                     </div>
-                    <p className="text-muted-foreground italic">
+                    <p className="text-muted-foreground dark:text-white italic">
                       &quot;{currentValue.testimonial.quote}&quot;
                     </p>
                   </CardContent>
@@ -358,7 +358,7 @@ export default function AboutSectionCompanyValues() {
 
         {/* Call-to-action */}
         <div className="mt-16 text-center">
-          <p className="text-muted-foreground mx-auto mb-6 max-w-2xl">
+          <p className="text-muted-foreground dark:text-white mx-auto mb-6 max-w-2xl">
             Ready to see the Nouveau Construction standard in action? Whether you're planning a new build, a complex renovation, or a landmark development, our team is here to bring your vision to life with excellence.
           </p>
         </div>

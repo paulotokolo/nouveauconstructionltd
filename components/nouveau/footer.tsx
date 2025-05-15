@@ -112,14 +112,14 @@ const Footer = ({
                     <>
                       {/* Mobile: 2 columns (hidden on sm and up) */}
                       <div className="grid grid-cols-2 gap-x-4 sm:hidden">
-                        <ul className="space-y-2 text-muted-foreground">
+                        <ul className="space-y-2 text-muted-foreground dark:text-white">
                           {leftColumnLinks.map((link, linkIdxMobile) => (
                             <li key={`left-${link.text}-${linkIdxMobile}`} className="font-medium hover:text-primary">
                               <a href={link.url}>{link.text}</a>
                             </li>
                           ))}
                         </ul>
-                        <ul className="space-y-2 text-muted-foreground">
+                        <ul className="space-y-2 text-muted-foreground dark:text-white">
                           {rightColumnLinks.map((link, linkIdxMobile) => (
                             <li key={`right-${link.text}-${linkIdxMobile}`} className="font-medium hover:text-primary">
                               <a href={link.url}>{link.text}</a>
@@ -128,7 +128,7 @@ const Footer = ({
                         </ul>
                       </div>
                       {/* SM and up: Single list (hidden by default, block on sm and up) */}
-                      <ul className="hidden sm:block space-y-2 text-muted-foreground">
+                      <ul className="hidden sm:block space-y-2 text-muted-foreground dark:text-white">
                         {section.links.map((link, linkIdxDesktop) => (
                           <li key={`single-${link.text}-${linkIdxDesktop}`} className="font-medium hover:text-primary">
                             <a href={link.url}>{link.text}</a>
@@ -137,7 +137,7 @@ const Footer = ({
                       </ul>
                     </>
                   ) : (
-                    <ul className="space-y-2 text-muted-foreground">
+                    <ul className="space-y-2 text-muted-foreground dark:text-white">
                       {section.links.map((link, linkIdxNormal) => (
                         <li key={`${section.title}-${link.text}-${linkIdxNormal}`} className="font-medium hover:text-primary">
                           <a href={link.url}>{link.text}</a>
@@ -152,7 +152,7 @@ const Footer = ({
 
           {/* Bottom section: Copyright and links */}
           {/* The UL for bottomLinks will now render nothing if bottomLinks is empty */}
-          <div className="mt-16 md:mt-24 flex flex-col md:flex-row justify-between items-center gap-4 border-t pt-8 text-sm font-medium text-muted-foreground">
+          <div className="mt-16 md:mt-24 flex flex-col md:flex-row justify-between items-center gap-4 border-t pt-8 text-sm font-medium text-muted-foreground dark:text-white">
             <p className="text-center md:text-left">{copyright || copyrightText}</p>
             {/* Only render the UL if there are bottom links to display */}
             {bottomLinks && bottomLinks.length > 0 && (
