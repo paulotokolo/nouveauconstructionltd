@@ -82,7 +82,7 @@ const Navbar1 = ({
 
   return (
     <section className="py-4">
-      <div className="container">
+      <div>
         {/* Desktop Menu */}
         <nav className="hidden justify-between lg:flex">
           <div className="flex items-center gap-6 pl-6">
@@ -108,7 +108,7 @@ const Navbar1 = ({
               </NavigationMenu>
             </div>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center pr-3">
             <ModeToggle />
           </div>
         </nav>
