@@ -157,17 +157,6 @@ export default function TestimonialSlider() {
         </div> 
         */}
 
-        <div className="text-center mt-12">
-          <a
-            href="#"
-            className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
-          >
-            View all testimonials
-            <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
-        </div>
       </div>
       {/* Add CSS for the animation in your global CSS file or a style tag */}
       <style jsx global>{`
