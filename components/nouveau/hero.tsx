@@ -41,7 +41,7 @@ export default function HeroSection() {
         {/* Image Block */}
         <div className="h-56 sm:h-full sm:order-last">
           <Image
-            src="https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?auto=format&fit=crop&q=80&w=1024"
+            src="https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?auto=format&fit=crop&q=80&w=1024"
             alt="Quality construction project"
             className="h-full w-full object-cover"
             width={1024}
